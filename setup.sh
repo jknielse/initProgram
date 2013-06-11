@@ -20,7 +20,7 @@ then
     else
         bldylw
         echo "    Adding alias to bashrc..."
-        echo "alias proginit='cp -nr \$(find `pwd`/skeletonFiles -mindepth 1) ./'" >> ~/.bashrc
+        echo "alias proginit='cp -nr \$(find `pwd`/skeletonFiles -mindepth 1 -printf \"%p \") ./'" >> ~/.bashrc
         bldgrn
         echo "    Done"
         bldylw
@@ -33,7 +33,7 @@ else
     touch ./installation_status
     bldylw
     echo "    Adding alias to bashrc..."
-    echo "alias proginit='cp -nr \$(find `pwd`/skeletonFiles -mindepth 1) ./'" >> ~/.bashrc
+    echo "alias proginit='cp -nr \$(find `pwd`/skeletonFiles -mindepth 1 -printf \"%p \") ./'" >> ~/.bashrc
     bldgrn
     echo "    Done"
     bldylw
